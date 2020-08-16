@@ -1,8 +1,8 @@
 # NativeScript WeChat login plugin
 
-[![npm](https://img.shields.io/npm/v/nativescript-wechat-login.svg)](https://www.npmjs.com/package/nativescript-wechat-login)
-[![npm](https://img.shields.io/npm/dt/nativescript-wechat-login.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-wechat-login)
-[![npm](https://img.shields.io/npm/dm/nativescript-wechat-login.svg)](https://www.npmjs.com/package/nativescript-wechat-login)
+[![npm](https://img.shields.io/npm/v/nativescript-wechat-login-knotes.svg)](https://www.npmjs.com/package/nativescript-wechat-login-knotes)
+[![npm](https://img.shields.io/npm/dt/nativescript-wechat-login-knotes.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-wechat-login-knotes)
+[![npm](https://img.shields.io/npm/dm/nativescript-wechat-login-knotes.svg)](https://www.npmjs.com/package/nativescript-wechat-login-knotes)
 
 Using this plugin you will be able implement wechat login feature in your APP. You can read more details from [here](https://open.wechat.com/cgi-bin/newreadtemplate?t=overseas_open/docs/mobile/login/guide#login_guide) 
 
@@ -10,7 +10,7 @@ Using this plugin you will be able implement wechat login feature in your APP. Y
 ## Installation
 
 ```javascript
-tns plugin add nativescript-wechat-login
+tns plugin add nativescript-wechat-login-knotes
 ```
 
 If you are using NativeScript 5.4.X then you can have a look [this branch](https://github.com/jibon57/nativescript-wechat-login/tree/1.0.2)
@@ -92,7 +92,7 @@ In your `main.ts` or `app.ts` need to import `initWechatSdk(WECHAT_APP_ID, UNIVE
 
 ```javascript
 ....
-import { initWechatSdk } from "nativescript-wechat-login";
+import { initWechatSdk } from "nativescript-wechat-login-knotes";
 
 initWechatSdk("wxd930ea5d5a258f4f", "https://www.your.app.universal.link");
 ```
@@ -101,7 +101,7 @@ In any other page
 
 ```javascript
 ....
-import { WechatLogin } from "nativescript-wechat-login";
+import { WechatLogin } from "nativescript-wechat-login-knotes";
 import * as app from "tns-core-modules/application";
 ```
 
