@@ -2,8 +2,8 @@ import { Observable } from 'tns-core-modules/data/observable';
 
 const setupAppDeligate = require('./getappdelegate').setupAppDeligate;
 
-export function initWechatSdk(wechatAppId) {
-    setupAppDeligate(wechatAppId);
+export function initWechatSdk(wechatAppId, universalLink) {
+    setupAppDeligate(wechatAppId, universalLink);
 }
 
 export class WechatLogin extends Observable {
