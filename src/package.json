@@ -1,6 +1,6 @@
 {
-    "name": "nativescript-wechat-login",
-    "version": "1.0.6",
+    "name": "nativescript-wechat-login-knotes",
+    "version": "1.0.0",
     "description": "Wechat Login plugin for nativescript. it is forked from https://github.com/jibon57/nativescript-wechat-login.git with fix for universal link",
     "main": "wechat-login",
     "typings": "index.d.ts",
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/luffyzc/nativescript-wechat-login-1.git"
+        "url": "https://github.com/luffyzc/nativescript-wechat-login-knotes.git"
     },
     "scripts": {
         "tsc": "npm i && tsc",
@@ -26,7 +26,7 @@
         "demo.ios": "npm run tsc && cd ../demo && tns run ios --emulator",
         "demo.android": "npm run tsc && cd ../demo && tns run android --emulator",
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
-        "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-wechat-login && tns plugin add ../src",
+        "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-wechat-login-knotes && tns plugin add ../src",
         "clean": "npm run demo.reset && npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i",
         "postinstall": "node scripts/postinstall.js"
     },
@@ -44,10 +44,10 @@
         "email": "luffyzc1994@gmail.com"
     },
     "bugs": {
-        "url": "https://github.com/luffyzc/nativescript-wechat-login-1/issues"
+        "url": "https://github.com/luffyzc/nativescript-wechat-login-knotes/issues"
     },
     "license": "Apache-2.0",
-    "homepage": "https://github.com/luffyzc/nativescript-wechat-login-1",
+    "homepage": "https://github.com/luffyzc/nativescript-wechat-login-knotes",
     "readmeFilename": "README.md",
     "devDependencies": {
         "tns-core-modules": "^6.0.0",
