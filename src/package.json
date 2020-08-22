@@ -1,6 +1,6 @@
 {
     "name": "nativescript-wechat-login-knotes",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Wechat Login plugin for nativescript. it is forked from https://github.com/jibon57/nativescript-wechat-login.git with fix for universal link",
     "main": "wechat-login",
     "typings": "index.d.ts",
