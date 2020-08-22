@@ -1,6 +1,6 @@
 import { Component, OnInit, NgZone } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular/router";
-import { WechatLogin } from "nativescript-wechat-login";
+import { WechatLogin } from "nativescript-wechat-login-knotes";
 import * as app from "tns-core-modules/application";
 
 @Component({

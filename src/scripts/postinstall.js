@@ -8,12 +8,12 @@ if (!appRoot) {
     return;
 }
 
-function getAppContext(appRoot){
+function getAppContext(appRoot) {
 
     const webpackConfig = require(path.resolve(appRoot, "webpack.config"));
 
     let env = {
-        android : "android"
+        android: "android"
     };
 
     const config = webpackConfig(env);
@@ -22,36 +22,36 @@ function getAppContext(appRoot){
 }
 
 function isNsConfigFileExists(nsconfigFile) {
-   try {
+    try {
         fs.accessSync(nsconfigFile, fs.constants.R_OK);
         return true;
-    
+
     } catch (err) {
         return false;
     }
 }
 
 function copyWXEntryActivityFile() {
-    
+
     var mainPackage = JSON.parse(fs.readFileSync(path.resolve(appRoot, 'package.json'), 'utf8'));
     var nsconfigFile = path.resolve(appRoot, 'nsconfig.json');
 
-    if(isNsConfigFileExists(nsconfigFile)){
+    if (isNsConfigFileExists(nsconfigFile)) {
         var nsconfig = JSON.parse(fs.readFileSync(nsconfigFile, 'utf8'));
 
-        if(nsconfig.appPath !== undefined){
+        if (nsconfig.appPath !== undefined) {
             copyPath = path.resolve(appRoot, nsconfig.appPath);
-        }else{
+        } else {
             copyPath = getAppContext(appRoot);
         }
-    }else{
+    } else {
         copyPath = getAppContext(appRoot);
     }
 
 
     console.log("copyPath: ", copyPath);
 
-    var wxActivityFile = path.resolve(appRoot, "node_modules/nativescript-wechat-login/wxapi.WXEntryActivity.android.ts");
+    var wxActivityFile = path.resolve(appRoot, "node_modules/nativescript-wechat-login-knotes/wxapi.WXEntryActivity.android.ts");
 
     console.log("appRoot: ", appRoot);
 
@@ -71,10 +71,10 @@ function copyWXEntryActivityFile() {
 
         if (err) throw err;
 
-        fs.readFile(wxActivityFileCopiedPath, 'utf8', function(err, data) {
+        fs.readFile(wxActivityFileCopiedPath, 'utf8', function (err, data) {
             var result = data.replace(/YOUR_APP_ID/g, appId);
 
-            fs.writeFile(wxActivityFileCopiedPath, result, 'utf8', function(err) {
+            fs.writeFile(wxActivityFileCopiedPath, result, 'utf8', function (err) {
                 if (err) return console.log(err);
             });
         });
