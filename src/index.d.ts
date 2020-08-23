@@ -1,5 +1,5 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { WechatSharingOptions } from './wechat-share.common';
+import { WechatSharingType, WechatSharingOptions, WechatSharingScene } from './wechat-share.common';
 
 export declare function initWechatSdk(wechatAppId: any): void;
 export declare class WechatLogin extends Observable {
@@ -8,3 +8,4 @@ export declare class WechatLogin extends Observable {
   share(options: WechatSharingOptions): boolean;
   isWechatInstalled(): boolean;
 }
+export { WechatSharingOptions, WechatSharingType, WechatSharingScene };
