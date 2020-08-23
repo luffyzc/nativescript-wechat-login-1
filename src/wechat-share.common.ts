@@ -1,3 +1,5 @@
+import { ImageSource } from '@nativescript/core/image-source'
+
 export interface WechatSharingOptions {
     scene: WechatSharingScene;
     messages?: WechatSharingMessages;
@@ -52,10 +54,11 @@ export function buildSendMessageToWXReq(options: WechatSharingOptions): SendMess
     return req;
 }
 
-function buildWxMediaMessage(message: WechatSharingMessages): wxMediaMessage {
-    let wechatMediaMessage = wxMediaMessage.alloc();
+function buildWxMediaMessage(message: WechatSharingMessages): WXMediaMessage {
+    let wechatMediaMessage = WXMediaMessage.alloc();
     wechatMediaMessage.title = message.title;
     wechatMediaMessage.description = message.description;
+    const media = message.media;
 
     let type = media.type ? media.type : WechatSharingType.TYPE_SHARING_WEBPAGE;
 
@@ -63,7 +66,7 @@ function buildWxMediaMessage(message: WechatSharingMessages): wxMediaMessage {
     switch (type) {
         case WechatSharingType.TYPE_SHARING_IMAGE:
             mediaObject = new WXImageObject();
-            mediaObject.imageData = UIImagePNGRepresentation(message.media.image.ios);
+            mediaObject.imageData = UIImagePNGRepresentation(media.image.ios);
             break;
         case WechatSharingType.TYPE_SHARING_MUSIC:
             mediaObject = new WXMusicObject();
