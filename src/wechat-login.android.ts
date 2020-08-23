@@ -1,7 +1,7 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import * as app from "tns-core-modules/application";
 import * as appSettings from "tns-core-modules/application-settings";
-import { WechatSharingOptions, buildSendMessageToWXReq } from './wechat-share.common';
+import { WechatSharingOptions, WechatSharingType, WechatSharingScene, buildSendMessageToWXReq } from './wechat-share.common';
 
 export function initWechatSdk(wechatAppId) {
     appSettings.setString("WECHAT_APP_ID", wechatAppId);
@@ -54,3 +54,5 @@ export class WechatLogin extends Observable {
         return this.api.isWXAppInstalled();
     }
 }
+
+export { WechatSharingOptions, WechatSharingType, WechatSharingScene };

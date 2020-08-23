@@ -1,5 +1,5 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { WechatSharingOptions, buildSendMessageToWXReq } from './wechat-share.common';
+import { WechatSharingOptions, WechatSharingType, WechatSharingScene, buildSendMessageToWXReq } from './wechat-share.common';
 
 const setupAppDeligate = require('./getappdelegate').setupAppDeligate;
 
@@ -49,3 +49,5 @@ export class WechatLogin extends Observable {
         return WXApi.isWXAppInstalled();
     }
 }
+
+export { WechatSharingOptions, WechatSharingType, WechatSharingScene };
