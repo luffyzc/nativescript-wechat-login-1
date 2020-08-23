@@ -1,6 +1,7 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import * as app from "tns-core-modules/application";
 import * as appSettings from "tns-core-modules/application-settings";
+import { WechatSharingOptions, buildSendMessageToWXReq } from './wechat-share.common';
 
 export function initWechatSdk(wechatAppId) {
     appSettings.setString("WECHAT_APP_ID", wechatAppId);
@@ -31,6 +32,19 @@ export class WechatLogin extends Observable {
         }
 
         return this.api.sendReq(req);
+    }
+
+
+    /**
+     * Share to wechat
+     */
+    public share(options: WechatSharingOptions) {
+
+        let req = buildSendMessageToWXReq(options);
+
+        WXApi.sendReqCompletion(req, function (res) {
+            return res;
+        });
     }
 
     /**
