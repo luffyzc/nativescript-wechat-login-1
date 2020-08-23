@@ -18,12 +18,12 @@ export interface WechatSharingMedia {
     videoUrl?: string;
     webpageUrl?: string;
 }
-export declare enum WechatSharingScene {
+export enum WechatSharingScene {
     SESSION = 0,
     TIMELINE = 1,
     FAVORITE = 2,
 }
-export declare enum WechatSharingType {
+export enum WechatSharingType {
     TYPE_SHARING_TEXT = 1,
     TYPE_SHARING_IMAGE = 2,
     TYPE_SHARING_MUSIC = 3,
