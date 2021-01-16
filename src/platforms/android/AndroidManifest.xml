@@ -3,7 +3,9 @@
     <application>
     	<activity
             android:name="${applicationId}.wxapi.WXEntryActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask"
+            >
 	    </activity>
     </application>
 </manifest>
