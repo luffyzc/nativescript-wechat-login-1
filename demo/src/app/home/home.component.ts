@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
         let wechat = new WechatLogin();
 
         if (wechat.isWechatInstalled()) {
-            wechat.doLogin("nativescript_demo");
+            wechat.doLogin();
         } else {
             console.log("wechat isn't installed")
         }

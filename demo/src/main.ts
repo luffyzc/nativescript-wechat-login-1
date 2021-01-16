@@ -4,6 +4,6 @@ import { initWechatSdk } from "nativescript-wechat-login-knotes";
 
 import { AppModule } from "./app/app.module";
 
-initWechatSdk("wxd930ea5d5a258f4f");
+initWechatSdk("wx9b28993d5c8d294b", 'https://knotesapp.cn/iosApp/');
 
 platformNativeScriptDynamic().bootstrapModule(AppModule);
