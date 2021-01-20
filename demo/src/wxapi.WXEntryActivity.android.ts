@@ -6,7 +6,7 @@ import * as appSettings from "tns-core-modules/application-settings";
 declare var androidx, com;
 
 // It should be YourAPPId.wxapi.WXEntryActivity 
-@JavaProxy("net.sourceforge.simcpux.wxapi.WXEntryActivity")
+@JavaProxy("cn.knotesapp.mobile.wxapi.WXEntryActivity")
 @Interfaces([com.tencent.mm.opensdk.openapi.IWXAPIEventHandler])
 class WXEntryActivity extends androidx.appcompat.app.AppCompatActivity {
     public isNativeScriptActivity;
